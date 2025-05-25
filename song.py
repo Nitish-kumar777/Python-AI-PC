@@ -2,7 +2,10 @@ from mutagen.easyid3 import EasyID3
 from mutagen.mp3 import MP3
 import os
 
-path = "C:/Users/adhik/Music/"
+path = os.getenv("DEFAULT_MUSIC_PATH")
+if not path:
+    print("❌ Default music path is not set. Please set the environment variable 'DEFAULT_MUSIC_PATH'.")
+    exit()
 
 files = os.listdir(path)
 
