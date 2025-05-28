@@ -270,8 +270,8 @@ def jarvis_mode():
                     app_name_to_open = normalized_cmd.replace("open", "").replace("launch", "").replace("start", "").strip()
                     open_app(app_name_to_open)
 
-                elif any(word in normalized_cmd for word in ["close", "exit", "terminate"]):
-                    app_name_to_close = normalized_cmd.replace("close", "").replace("exit", "").replace("terminate", "").strip()
+                elif any(word in normalized_cmd for word in ["close" , "terminate"]):
+                    app_name_to_close = normalized_cmd.replace("close", "").replace("terminate", "").strip()
                     close_app(app_name_to_close)
                 # Exit commands
                 elif any(word in normalized_cmd for word in ["exit", "shut down" , "shutdown", "sleep", "goodbye"]):
